@@ -1,5 +1,7 @@
 # Password Generator
 
+This is not perfect as there is a slight bias from the use of $RANDOM, but for this usecase the randomness is sufficient.
+
 Usage:
 
 - Add a file called wordlist.txt containing your list of words
