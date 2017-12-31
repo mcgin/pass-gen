@@ -1,9 +1,10 @@
-count=$(grep -c . wordlist.txt)
+wordcount=$(grep -c . wordlist.txt)
 result=""
-for i in {1..10}
-do 
-    n=$(( ( RANDOM % $count )  + 1 ))
+i=1
+while [ "$i" -le "$1" ]; do
+    n=$(( ( RANDOM % $wordcount )  + 1 ))
     result+=$(head -$n wordlist.txt | tail -1)
     result+=" "
+    i=$(($i + 1))
 done
 echo $result
